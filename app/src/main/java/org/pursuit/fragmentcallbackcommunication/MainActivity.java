@@ -24,11 +24,11 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
 
     @Override
     public void toDisplayFragment(String name, String number, String image) {
-//        DisplayFragment displayFragment = DisplayFragment.newInstance(name, number, image);
-//        FragmentManager fragmentManager = getSupportFragmentManager();
-//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//        fragmentTransaction.replace(R.id.main_activity_container, displayFragment)
-//                .addToBackStack(null)
-//                .commit();
+        DisplayFragment displayFragment = DisplayFragment.newInstance(name, number, image);
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.main_activity_container, displayFragment)
+                .addToBackStack(null)
+                .commit();
     }
 }
