@@ -6,8 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import org.pursuit.fragmentcallbackcommunication.FragmentInterface;
 import org.pursuit.fragmentcallbackcommunication.R;
 import org.pursuit.fragmentcallbackcommunication.model.Zodiac;
+import org.pursuit.fragmentcallbackcommunication.model.ZodiacList;
 import org.pursuit.fragmentcallbackcommunication.view.ZodiacViewHolder;
 
 import java.util.List;
@@ -15,11 +17,11 @@ import java.util.List;
 public class ZodiacAdapter extends RecyclerView.Adapter<ZodiacViewHolder> {
 
     private FragmentInterface fragmentInterface;
+    private List<Zodiac> zodiacList;
 
-    private List<ZodiacAdapter> zodiacList;
-
-    public ZodiacAdapter(List<Zodiac> planetList) {
-        this.zodiacList = zod;
+    public ZodiacAdapter(List<Zodiac> zodiacList, FragmentInterface fragmentInterface) {
+        this.zodiacList = zodiacList;
+        this.fragmentInterface = fragmentInterface;
     }
 
     @NonNull
@@ -31,8 +33,7 @@ public class ZodiacAdapter extends RecyclerView.Adapter<ZodiacViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ZodiacViewHolder zodiacViewHolder, int position) {
-        zodiacViewHolder.onBind(zodiacList.get(position));
-
+        zodiacViewHolder.onBind(zodiacList.get(position), fragmentInterface);
     }
 
     @Override

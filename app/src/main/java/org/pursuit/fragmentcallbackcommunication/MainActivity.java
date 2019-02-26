@@ -18,14 +18,17 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
         FirstFragment firstFragment = FirstFragment.newInstance();
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.main_activity_container, firstFragment).commit();
+        fragmentTransaction.replace(R.id.main_activity_container, firstFragment)
+                .commit();
     }
 
     @Override
-    public void toDisplayFragment() {
-        DisplayFragment displayFragment = DisplayFragment.newInstance();
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.main_activity_container, displayFragment).addToBackStack(null).commit();
+    public void toDisplayFragment(String name, String number, String image) {
+//        DisplayFragment displayFragment = DisplayFragment.newInstance(name, number, image);
+//        FragmentManager fragmentManager = getSupportFragmentManager();
+//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//        fragmentTransaction.replace(R.id.main_activity_container, displayFragment)
+//                .addToBackStack(null)
+//                .commit();
     }
 }

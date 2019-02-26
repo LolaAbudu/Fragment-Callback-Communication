@@ -5,6 +5,10 @@ public class Zodiac {
     private String number;
     private String image;
 
+    public Zodiac() {
+
+    }
+
     public Zodiac(String name, String number, String image) {
         this.name = name;
         this.number = number;

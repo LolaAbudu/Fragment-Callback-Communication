@@ -1,5 +1,5 @@
 package org.pursuit.fragmentcallbackcommunication;
 
 public interface FragmentInterface {
-    void toDisplayFragment();
+    void toDisplayFragment(String name, String number, String image);
 }
