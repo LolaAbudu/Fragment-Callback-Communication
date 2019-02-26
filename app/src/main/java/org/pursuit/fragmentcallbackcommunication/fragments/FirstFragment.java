@@ -90,7 +90,7 @@ public class FirstFragment extends Fragment {
 
             @Override
             public void onFailure(Call<ZodiacList> call, Throwable t) {
-                Log.d("tag", "onFailure"  + t.toString());
+                Log.d("tag", "onFailure" + t.toString());
             }
         });
     }
